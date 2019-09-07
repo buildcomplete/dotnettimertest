@@ -16,7 +16,7 @@ namespace timer
 			// and start it again, 
 			// we would expect our precision timer to run about 3 seconds now (1+2seconds)
 			var t1000 = new Timer(1000) { AutoReset = false };
-			t2000.Elapsed += (s, e) => { t2000.Stop(); t2000.Start(); };
+			t1000.Elapsed += (s, e) => { t2000.Stop(); t2000.Start(); };
 
 			var precisionTimer = Stopwatch.StartNew();
 			precisionTimer.Start();
